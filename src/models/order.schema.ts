@@ -7,6 +7,7 @@ export const OrderSchema = new mongoose.Schema(
       ref: 'User',
     },
     totalPrice: String,
+<<<<<<< HEAD
     products: [
       {
         product: {
@@ -16,6 +17,15 @@ export const OrderSchema = new mongoose.Schema(
         quantity: Number,
       },
     ],
+=======
+    products: {
+      product: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Product',
+      },
+      quantity: Number,
+    },
+>>>>>>> 3d0699ce6cb1a7938424efec339a7be9757f821f
   },
   {
     timestamps: true,
